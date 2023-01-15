@@ -1,4 +1,4 @@
-import { SwaggerComponent } from "../Types/Component";
+import { SwaggerComponent } from "../types/Component";
 
 export const serverErrorComponent: SwaggerComponent = {
     description: 'Server error',

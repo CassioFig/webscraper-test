@@ -1,4 +1,4 @@
-import { SwaggerSchema } from "../Types";
+import { SwaggerSchema } from "../types";
 
 export const errorSchema: SwaggerSchema = {
     type: 'object',
