@@ -1,4 +1,6 @@
 import express, { Application, Router } from "express";
+import { serve, setup } from "swagger-ui-express";
+import swaggerConfig from '@utils/swagger';
 import { readdirSync } from "fs";
 import { join } from "path";
 import cors from 'cors';
@@ -29,7 +31,9 @@ class App {
         this.express.use('/api', router)
     }
 
-    private swagger(): void {}
+    private swagger(): void {
+        this.express.use('/api-docs', serve, setup(swaggerConfig))
+    }
 }
 
 export default new App().express;
